@@ -1,0 +1,4 @@
+E:\WWW\wek-e\WeiKe\WeiKe.Model\bin\Debug\WeiKe.Model.dll
+E:\WWW\wek-e\WeiKe\WeiKe.Model\bin\Debug\WeiKe.Model.pdb
+E:\WWW\wek-e\WeiKe\WeiKe.Model\obj\Debug\WeiKe.Model.dll
+E:\WWW\wek-e\WeiKe\WeiKe.Model\obj\Debug\WeiKe.Model.pdb

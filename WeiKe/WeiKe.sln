@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeiKe.UI", "WeiKe.UI\WeiKe.UI.csproj", "{CFDB7580-03BF-44CA-8257-7CC274E9E1CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeiKe.Repository", "WeiKe.Repository\WeiKe.Repository.csproj", "{67904835-7E0D-4EEF-AC62-0194C85A187A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeiKe.Service", "WeiKe.Service\WeiKe.Service.csproj", "{2765C93B-1E42-4CA7-9846-327286A4E6A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeiKe.Infrastructure", "WeiKe.Infrastructure\WeiKe.Infrastructure.csproj", "{9BC722A7-2C99-43B0-A27E-8B9DA35F8386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeiKe.Model", "WeiKe.Model\WeiKe.Model.csproj", "{23F4C1D3-398C-4719-A25D-2FEA52D50E85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +21,22 @@ Global
 		{CFDB7580-03BF-44CA-8257-7CC274E9E1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFDB7580-03BF-44CA-8257-7CC274E9E1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFDB7580-03BF-44CA-8257-7CC274E9E1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67904835-7E0D-4EEF-AC62-0194C85A187A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67904835-7E0D-4EEF-AC62-0194C85A187A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67904835-7E0D-4EEF-AC62-0194C85A187A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67904835-7E0D-4EEF-AC62-0194C85A187A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2765C93B-1E42-4CA7-9846-327286A4E6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2765C93B-1E42-4CA7-9846-327286A4E6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2765C93B-1E42-4CA7-9846-327286A4E6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2765C93B-1E42-4CA7-9846-327286A4E6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC722A7-2C99-43B0-A27E-8B9DA35F8386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC722A7-2C99-43B0-A27E-8B9DA35F8386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC722A7-2C99-43B0-A27E-8B9DA35F8386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC722A7-2C99-43B0-A27E-8B9DA35F8386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F4C1D3-398C-4719-A25D-2FEA52D50E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F4C1D3-398C-4719-A25D-2FEA52D50E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F4C1D3-398C-4719-A25D-2FEA52D50E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F4C1D3-398C-4719-A25D-2FEA52D50E85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
