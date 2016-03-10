@@ -5,7 +5,8 @@ using System.Text;
 
 namespace WeiKe.Repository
 {
-    public class Class1
+    public static class UsersRepository
     {
+        
     }
 }
