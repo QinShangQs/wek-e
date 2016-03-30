@@ -15,11 +15,50 @@ namespace WeiKe.UI
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute(
+                "Login", // Route name
+                "login.html", // URL with parameters
+                new { controller = "Account", action = "Login" } // Parameter defaults
+            );
+
 
             routes.MapRoute(
-                "Default", // 路由名称
-                "{controller}/{action}/{id}", // 带有参数的 URL
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // 参数默认值
+                "Index", // Route name
+                "index.html", // URL with parameters
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            //验证码
+            routes.MapRoute(
+                "validateCode", // Route name
+                "validateCode.html", // URL with parameters
+                new { controller = "Home", action = "ValidateCode" }
+            );      
+
+            routes.MapRoute(
+                "News-action", // Route name
+                "news-{action}.html", // URL with parameters
+                new { controller = "News", action = "Commonweal" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "News", // Route name
+                "news.html", // URL with parameters
+                new { controller = "News", action = "Index" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "NewDetail", // Route name
+                "new-{id}.html", // URL with parameters
+                new { controller = "News", action = "Detail", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+
+
+            routes.MapRoute(
+                "About", // Route name
+                "about.html", // URL with parameters
+                new { controller = "About", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
         }

@@ -7,3 +7,12 @@ E:\WWW\wek-e\WeiKe\WeiKe.Repository\bin\Debug\WeiKe.Model.pdb
 E:\WWW\wek-e\WeiKe\WeiKe.Repository\obj\Debug\WeiKe.Repository.csprojResolveAssemblyReference.cache
 E:\WWW\wek-e\WeiKe\WeiKe.Repository\obj\Debug\WeiKe.Repository.dll
 E:\WWW\wek-e\WeiKe\WeiKe.Repository\obj\Debug\WeiKe.Repository.pdb
+D:\WWW\wek-e\WeiKe\WeiKe.Repository\bin\Debug\WeiKe.Repository.dll
+D:\WWW\wek-e\WeiKe\WeiKe.Repository\bin\Debug\WeiKe.Repository.pdb
+D:\WWW\wek-e\WeiKe\WeiKe.Repository\bin\Debug\WeiKe.Infrastructure.dll
+D:\WWW\wek-e\WeiKe\WeiKe.Repository\bin\Debug\WeiKe.Model.dll
+D:\WWW\wek-e\WeiKe\WeiKe.Repository\bin\Debug\WeiKe.Infrastructure.pdb
+D:\WWW\wek-e\WeiKe\WeiKe.Repository\bin\Debug\WeiKe.Model.pdb
+D:\WWW\wek-e\WeiKe\WeiKe.Repository\obj\Debug\ResolveAssemblyReference.cache
+D:\WWW\wek-e\WeiKe\WeiKe.Repository\obj\Debug\WeiKe.Repository.dll
+D:\WWW\wek-e\WeiKe\WeiKe.Repository\obj\Debug\WeiKe.Repository.pdb

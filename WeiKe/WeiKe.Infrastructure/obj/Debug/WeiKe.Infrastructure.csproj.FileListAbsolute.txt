@@ -2,3 +2,8 @@ E:\WWW\wek-e\WeiKe\WeiKe.Infrastructure\bin\Debug\WeiKe.Infrastructure.dll
 E:\WWW\wek-e\WeiKe\WeiKe.Infrastructure\bin\Debug\WeiKe.Infrastructure.pdb
 E:\WWW\wek-e\WeiKe\WeiKe.Infrastructure\obj\Debug\WeiKe.Infrastructure.dll
 E:\WWW\wek-e\WeiKe\WeiKe.Infrastructure\obj\Debug\WeiKe.Infrastructure.pdb
+D:\WWW\wek-e\WeiKe\WeiKe.Infrastructure\bin\Debug\WeiKe.Infrastructure.dll
+D:\WWW\wek-e\WeiKe\WeiKe.Infrastructure\bin\Debug\WeiKe.Infrastructure.pdb
+D:\WWW\wek-e\WeiKe\WeiKe.Infrastructure\obj\Debug\ResolveAssemblyReference.cache
+D:\WWW\wek-e\WeiKe\WeiKe.Infrastructure\obj\Debug\WeiKe.Infrastructure.dll
+D:\WWW\wek-e\WeiKe\WeiKe.Infrastructure\obj\Debug\WeiKe.Infrastructure.pdb
