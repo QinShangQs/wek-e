@@ -76,7 +76,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\wk.accdb" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\images\abg.jpg" />
+    <Content Include="Content\images\abg1.jpg" />
+    <Content Include="Content\images\emal.jpg" />
+    <Content Include="Content\images\logo.ico" />
+    <Content Include="Content\images\sucai1_03.jpg" />
+    <Content Include="Content\images\sucai1_06.jpg" />
+    <Content Include="Content\images\sucai1_11.jpg" />
+    <Content Include="Content\images\sucai1_13.jpg" />
+    <Content Include="Content\images\sucai1_15.jpg" />
+    <Content Include="Content\images\sucai1_36.jpg" />
+    <Content Include="Content\images\zuoce_01.jpg" />
+    <Content Include="Content\images\zuoce_02.jpg" />
+    <Content Include="Content\images\zuoce_03.jpg" />
+    <Content Include="Content\zong.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\a5index.js" />
+    <Content Include="Scripts\ajaxfileupload.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\js.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -108,7 +128,6 @@
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\WeiKe.Infrastructure\WeiKe.Infrastructure.csproj">
       <Project>{9BC722A7-2C99-43B0-A27E-8B9DA35F8386}</Project>

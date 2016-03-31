@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <script src="/Scripts/a5index.js" type="text/javascript"></script>
 <!-- InstanceBeginEditable name="zhong" -->
-<div>
+<div >
     <div class="mainbanner">
         <div class="mainbanner_window">
             <ul id="slideContainer">

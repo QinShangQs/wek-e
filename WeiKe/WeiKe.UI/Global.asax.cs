@@ -18,9 +18,14 @@ namespace WeiKe.UI
             routes.MapRoute(
                 "Login", // Route name
                 "login.html", // URL with parameters
-                new { controller = "Account", action = "Login" } // Parameter defaults
+                new { controller = "Account", action = "LogOn" } // Parameter defaults
             );
 
+            routes.MapRoute(
+                "Register", // Route name
+                "register.html", // URL with parameters
+                new { controller = "Account", action = "Register" } // Parameter defaults
+            );
 
             routes.MapRoute(
                 "Index", // Route name
@@ -58,7 +63,13 @@ namespace WeiKe.UI
             routes.MapRoute(
                 "About", // Route name
                 "about.html", // URL with parameters
-                new { controller = "About", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = "Home", action = "About", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Default", // Route name
+                "{controller}/{action}/{id}", // URL with parameters
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
         }

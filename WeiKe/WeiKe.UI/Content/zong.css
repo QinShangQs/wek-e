@@ -19,7 +19,7 @@ ul, dl, dt, dd, li
 div
 {
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .cls
@@ -43,7 +43,13 @@ a
 }
 
 img{ border:none;}
-
+.container
+{
+    text-align:left;
+    min-height:560px;
+    max-width:1051px;   
+    padding-top:5px;
+}
 .zong .top .top1
 {
     /*padding-top: 20px;
@@ -71,8 +77,9 @@ img{ border:none;}
 }
 .zong .top .top1.center .right .dingbu
 {
-        text-align: right;
-    width: 80px;
+    text-align: right;
+    /* width: 80px; */
+    margin-left: 20px;
     float: right;
     padding-top: 5px;
 }

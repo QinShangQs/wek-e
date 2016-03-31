@@ -20,3 +20,5 @@ D:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Service.pdb
 D:\WWW\wek-e\WeiKe\WeiKe.UI\obj\Debug\ResolveAssemblyReference.cache
 D:\WWW\wek-e\WeiKe\WeiKe.UI\obj\Debug\WeiKe.UI.dll
 D:\WWW\wek-e\WeiKe\WeiKe.UI\obj\Debug\WeiKe.UI.pdb
+D:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Repository.dll
+D:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Repository.pdb

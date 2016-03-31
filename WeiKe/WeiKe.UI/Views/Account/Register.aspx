@@ -3,58 +3,21 @@
 <asp:Content ID="registerTitle" ContentPlaceHolderID="TitleContent" runat="server">
     注册
 </asp:Content>
-
 <asp:Content ID="registerContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>创建新帐户</h2>
-    <p>
-        使用以下表单创建新帐户。 
-    </p>
-    <p>
-        密码的长度至少为 <%: ViewData["PasswordLength"] %> 个字符。
-    </p>
-
-    <% using (Html.BeginForm()) { %>
-        <%: Html.ValidationSummary(true, "帐户创建不成功。请更正错误并重试。") %>
-        <div>
-            <fieldset>
-                <legend>帐户信息</legend>
-                
-                <div class="editor-label">
-                    <%: Html.LabelFor(m => m.UserName) %>
-                </div>
-                <div class="editor-field">
-                    <%: Html.TextBoxFor(m => m.UserName) %>
-                    <%: Html.ValidationMessageFor(m => m.UserName) %>
-                </div>
-                
-                <div class="editor-label">
-                    <%: Html.LabelFor(m => m.Email) %>
-                </div>
-                <div class="editor-field">
-                    <%: Html.TextBoxFor(m => m.Email) %>
-                    <%: Html.ValidationMessageFor(m => m.Email) %>
-                </div>
-                
-                <div class="editor-label">
-                    <%: Html.LabelFor(m => m.Password) %>
-                </div>
-                <div class="editor-field">
-                    <%: Html.PasswordFor(m => m.Password) %>
-                    <%: Html.ValidationMessageFor(m => m.Password) %>
-                </div>
-                
-                <div class="editor-label">
-                    <%: Html.LabelFor(m => m.ConfirmPassword) %>
-                </div>
-                <div class="editor-field">
-                    <%: Html.PasswordFor(m => m.ConfirmPassword) %>
-                    <%: Html.ValidationMessageFor(m => m.ConfirmPassword) %>
-                </div>
-                
-                <p>
-                    <input type="submit" value="注册" />
-                </p>
-            </fieldset>
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a href="#home" data-toggle="tab">我是学生</a></li>
+        <li><a href="#ios" data-toggle="tab">我是老师</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+            <p>
+                W3Cschoool菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
         </div>
-    <% } %>
+        <div class="tab-pane fade" id="ios">
+            <p>
+                iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS
+                X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+        </div>
+       
+    </div>
 </asp:Content>
