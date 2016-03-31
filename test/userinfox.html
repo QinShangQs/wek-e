@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>在线尝试 Bootstrap 实例</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+body {
+	font-family: '微软雅黑'
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default" role="navigation"
+			style="margin-bottom: 5px;">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#example-navbar-collapse">
+					<span class="sr-only">我的微课</span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">我的微课</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">iOS</a></li>
+					<li><a href="#">SVN</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown"> Java <b class="caret"></b>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">jmeter</a></li>
+							<li><a href="#">EJB</a></li>
+							<li><a href="#">Jasper Report</a></li>
+							<li class="divider"></li>
+							<li><a href="#">分离的链接</a></li>
+							<li class="divider"></li>
+							<li><a href="#">另一个分离的链接</a></li>
+						</ul></li>
+
+				</ul>
+
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">搜索</button>
+				</form>
+
+			</div>
+			<div>
+				<p class="navbar-text navbar-right"
+					style="width: 200px; text-align: right; margin-right: 20px;">
+					<a class="btn-mini" data-toggle="modal" style="cursor: pointer;"
+						data-target="#myModal">登录</a> | <a href="/register.html"
+						class="btn-mini">注册</a>
+				</p>
+			</div>
+		</nav>
+		<ol class="breadcrumb" style="margin-bottom: 5px">
+			<li><a href="index.html">首页</a></li>
+			<li class="active">注册</li>
+		</ol>
+	</div>
+	<div class="container">
+		<ul id="myTab" class="nav nav-tabs">
+			<li class="active"><a href="#home" data-toggle="tab"> 学生</a></li>
+			<li><a href="#ios" data-toggle="tab">教师</a></li>
+		</ul>
+		<div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade in active" id="home">
+				<form role="form" style="width: 300px; margin: auto"
+					action="main/active" onsubmit="return check();">
+					<fieldset>
+						<legend></legend>
+						<div class="form-group">
+							<label class="control-label">账号</label>
+							<div class="controls">
+								<input name="name" type="text" placeholder="必填项"
+									class="form-control" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">密码</label>
+							<div class="controls">
+								<input id="pwd" name="pwd" type="password" placeholder="必填项"
+									class="form-control" required onchange="checkPasswords()">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">确认密码</label>
+							<div class="controls">
+								<input id="pwd1" name="pwd1" type="password" placeholder="必填项"
+									class="form-control" required onchange="checkPasswords()">
+							</div>
+						</div>
+						
+						<legend>管理员信息</legend>
+						<div class="form-group">
+							<label class="control-label"> 性别</label>
+							<div class="controls">
+								<label class="checkbox-inline"> <input type="radio"
+									name="optionsRadiosinline" id="optionsRadios3" value="option1"
+									checked> 男
+								</label> <label class="checkbox-inline"> <input type="radio"
+									name="optionsRadiosinline" id="optionsRadios4" value="option2">
+									女
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label"> 姓名</label>
+							<div class="controls">
+								<input name="name" type="text" placeholder="必填项，实名"
+									class="form-control" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label"> 办公电话</label>
+							<div class="controls">
+								<input name="tel" type="text" placeholder="必填项"
+									class="form-control" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="input01"> 移动电话</label>
+							<div class="controls">
+								<input name="phone" type="text" placeholder="必填项"
+									class="form-control" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label"> 邮箱</label>
+							<div class="controls">
+								<input name="email" type="text" placeholder="必填项"
+									class="form-control" required
+									pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$"
+									title="邮箱正确格式：xxx@xxx.xxx">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label"> 地址</label>
+							<div class="controls">
+								<input name="addr" type="text" placeholder="必填项"
+									class="form-control" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label"> </label>
+							<div class="controls">
+								<button class="btn" class="btn btn-primary">立即注册</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="tab-pane fade" id="ios">
+				<p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和
+					Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS
+					是苹果的移动版本。</p>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+
+	<script>
+		function checkPasswords() {
+			var passl = document.getElementById("pwd");
+			var pass2 = document.getElementById("pwd1");
+			if (passl.value != pass2.value)
+				passl.setCustomValidity("两次密码必须输入一致！");
+			else
+				passl.setCustomValidity('');
+		}
+
+		function check() {
+			document.getElementById('ok').disabled = 'disabled';
+		}
+	</script>
+
+
+	<div class="container">
+		<hr>
+		<footer>
+			<p>&copy; Company 2012</p>
+		</footer>
+	</div>
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="width: 300px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">登录/注册</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-bottom">
+
+						<div class="form-group">
+							<label class="sr-only" for="form-username">账号</label> <br /> <input
+								type="text" name="form-username" placeholder="账号"
+								class="form-username form-control" id="form-username">
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="form-password">密码</label> <input
+								type="password" name="form-password" placeholder="密码."
+								class="form-password form-control input-error"
+								id="form-password">
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" style="width: 100%" class="btn btn-primary">登录</button>
+					<div style="height: 3px"></div>
+					<button type="button" style="width: 100%" class="btn btn-default"
+						onclick="location.href='/register.html'">注册</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+</body>
+</html>
