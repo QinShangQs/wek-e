@@ -10,6 +10,8 @@ using System.Web.Security;
 using WeiKe.UI.Models;
 using WeiKe.Service;
 using WeiKe.Model;
+using System.Web.Script.Serialization;
+using WeiKe.Infrastructure;
 
 namespace WeiKe.UI.Controllers
 {
@@ -17,42 +19,16 @@ namespace WeiKe.UI.Controllers
     [HandleError]
     public class AccountController : BaseController
     {
-
-        public ActionResult LogOn()
-        {
-            return View();
-        }
-
-
-        [HttpPost]
-        public ActionResult LogOn(string userName, string password, string returnUrl)
-        {
-            string message = string.Empty;
-            Users user = LoginService.Login(userName, password, ref message);
-            if (user != null)
-            {
-                FormsAuthentication.SetAuthCookie(userName, false);
-                if (!String.IsNullOrEmpty(returnUrl))
-                    return Redirect(returnUrl);
-                else
-                    return Redirect("/index.html");
-            }
-            else
-            {
-                ModelState.AddModelError("", message);
-            }
-
-            return View();
-        }
+     
 
         [HttpPost]
         public ActionResult AjaxLogin(string userName, string password)
         {
             string message = string.Empty;
             Users user = LoginService.Login(userName, password, ref message);
-            if (user != null)
+            if (string.IsNullOrEmpty(message))
             {
-                FormsAuthentication.SetAuthCookie(userName, false);
+                FormsAuthent(user);
                 return Json(new { Success = true, Message = string.Empty });
             }
             else
@@ -101,17 +77,17 @@ namespace WeiKe.UI.Controllers
                 experience = experience
             };
 
-            if (validateCode != Session["ValidateCode"].ToString())
+            if (validateCode != base.GetSessionByKey("ValidateCode"))
             {
                 ViewData["resp"] = base.RespResult(false,"验证码错误");
             }
             else 
             {
                 string message = string.Empty;
-                bool success = LoginService.Register(student, ref message);
-                if (success)
+                Users user = LoginService.Register(student, ref message);
+                if (string.IsNullOrEmpty(message))
                 {
-                    FormsAuthentication.SetAuthCookie(name, false);
+                    FormsAuthent(user);
                     ViewData["resp"] = base.RespResult(true, "注册成功!");
                 }
                 else 
@@ -122,5 +98,7 @@ namespace WeiKe.UI.Controllers
 
             return View();
         }
+
+
     }
 }

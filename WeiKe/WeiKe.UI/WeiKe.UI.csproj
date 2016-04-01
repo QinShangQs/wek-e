@@ -71,12 +71,16 @@
     <Compile Include="Controllers\CenterController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MyActionController.cs" />
     <Compile Include="Controllers\MyController.cs" />
+    <Compile Include="Controllers\MyCourseController.cs" />
+    <Compile Include="Controllers\MyPersonController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\HtmlHelpers.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\ValidateCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +107,7 @@
     <Content Include="Content\images\abg1.jpg" />
     <Content Include="Content\images\emal.jpg" />
     <Content Include="Content\images\logo.ico" />
+    <Content Include="Content\images\noheader.jpg" />
     <Content Include="Content\images\sucai1_03.jpg" />
     <Content Include="Content\images\sucai1_06.jpg" />
     <Content Include="Content\images\sucai1_11.jpg" />
@@ -121,10 +126,20 @@
     <Content Include="Views\Account\RegisterTeacher.aspx" />
     <Content Include="Views\Center\Index.aspx" />
     <Content Include="Views\Course\Index.aspx" />
+    <Content Include="Views\MyAction\Create.aspx" />
+    <Content Include="Views\MyAction\Edit.aspx" />
+    <Content Include="Views\MyAction\Index.aspx" />
+    <Content Include="Views\MyCourse\Create.aspx" />
+    <Content Include="Views\MyCourse\Edit.aspx" />
+    <Content Include="Views\MyCourse\Index.aspx" />
+    <Content Include="Views\MyPerson\Students.aspx" />
+    <Content Include="Views\MyPerson\Teachers.aspx" />
     <Content Include="Views\My\Index.aspx" />
     <Content Include="Views\My\Reset.aspx" />
     <Content Include="Views\My\Info.aspx" />
     <Content Include="Views\My\HeaderImg.aspx" />
+    <Content Include="Views\My\InfoTeacher.aspx" />
+    <Content Include="Views\Shared\RespUserControl.ascx" />
     <Content Include="Views\Teachers\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -146,9 +161,6 @@
     <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
-    <Content Include="Views\Account\ChangePassword.aspx" />
-    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
-    <Content Include="Views\Account\LogOn.aspx" />
     <Content Include="Views\Account\Register.aspx" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\Index.aspx" />

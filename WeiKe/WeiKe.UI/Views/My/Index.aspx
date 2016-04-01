@@ -8,7 +8,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="SubNav" runat="server">
-        <ol class="breadcrumb">
+        <ol class="breadcrumb" style="width:100%">
 				  <li><a href="/my.html">个人中心</a></li>
 				  <li class="active">首页</li>
 	    </ol>	

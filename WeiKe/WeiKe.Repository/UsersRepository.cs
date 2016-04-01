@@ -13,10 +13,14 @@ namespace WeiKe.Repository
         public static int Add(Users inst)
         {
             string sql = "insert into users (name,email,sex,birthday,school,grad,parentName,parentPhone,headerImg,addtime,categoryId,pwd,roleName,phone,degree, experience)";
-            sql += string.Format(" values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10},'{11}','{12}','{13}','{14}','{15}');"//select SCOPE_IDENTITY();
+            sql += string.Format(" values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10},'{11}','{12}','{13}','{14}','{15}');"//
                 , inst.name, inst.email, inst.sex, inst.birthday, inst.school, inst.grad, inst.parentName, inst.parentPhone, inst.headerImg,
                DateTime.Now, inst.categoryId, inst.pwd, inst.roleName, inst.phone,inst.degree, inst.experience);
-            return OleDbHelper.ExecuteCommand(sql);
+            if (OleDbHelper.ExecuteCommand(sql) > 0) 
+            {
+                return OleDbHelper.GetScalar("select @@IDENTITY");
+            }
+            return 0;
         }
 
         public static int Update(Users inst)
@@ -63,7 +67,7 @@ namespace WeiKe.Repository
             return inst;
         }
 
-        public static IList<Users> FindAll(string sql = "")
+        private static IList<Users> FindAll(string sql = "")
         {
             sql = string.IsNullOrEmpty(sql) ? "select * from users" : sql;
             IList<Users> list = new List<Users>();
@@ -77,6 +81,11 @@ namespace WeiKe.Repository
             return list;
         }
 
+        public static IList<Users> FindByRoleName(string roleName) 
+        {
+            return FindAll(string.Format("select * from users where roleName = '{0}'", roleName));
+        }
+
         public static Users GetByName(string name) 
         {
             string sql = string.Format("select * from users where name = '{0}'", name);
@@ -88,7 +97,9 @@ namespace WeiKe.Repository
         {
             Users inst = new Users();
             inst.id = CommonUtil.ParseInt(r["id"]);
-            inst.name = CommonUtil.ParseStr(r["email"]);
+            inst.name = CommonUtil.ParseStr(r["name"]);
+            inst.pwd = CommonUtil.ParseStr(r["pwd"]);
+            inst.email = CommonUtil.ParseStr(r["email"]);
             inst.sex = CommonUtil.ParseStr(r["sex"]);
             inst.birthday = CommonUtil.ParseStr(r["birthday"]);
             inst.school = CommonUtil.ParseStr(r["school"]);

@@ -19,19 +19,25 @@ namespace WeiKe.Service
             else if (user.pwd != password) 
             {
                 message = "账号或密码不正确！";
+                user = null;
             }
             return user;
         }
 
-        public static bool Register(Users inst,ref string message) 
+        public static Users Register(Users inst,ref string message) 
         {
             if (UsersRepository.GetByName(inst.name) != null) 
             {
                 message = "账号已存在，请更换！";
-                return false;
+                return null;
             }
 
-            return UsersRepository.Add(inst) > 0;
+            int newId = UsersRepository.Add(inst);
+            if (newId > 0) 
+            {
+                return UsersRepository.GetById(newId);
+            }
+            return null;
         }
     }
 }

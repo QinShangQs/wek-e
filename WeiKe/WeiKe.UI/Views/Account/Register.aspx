@@ -22,7 +22,7 @@
                         <%:((dynamic)ViewData["resp"]).Message%>，正在登录...
                         <script type="text/javascript">
                             setTimeout(function () {
-                                location.href = "/center.html";
+                                location.href = "/my.html";
                             });                            
                         </script>
                     </div>

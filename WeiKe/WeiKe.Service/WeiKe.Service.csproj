@@ -43,6 +43,7 @@
     <Compile Include="CategroyService.cs" />
     <Compile Include="LoginService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeiKe.Infrastructure\WeiKe.Infrastructure.csproj">

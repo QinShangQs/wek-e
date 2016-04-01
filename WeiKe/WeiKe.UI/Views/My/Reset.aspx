@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/My.master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="SubContent" runat="server">
+<div style="height:3px"></div>
+<%: Html.Partial("RespUserControl") %>
     <form id="f1" role="form" style="width: 300px; margin: auto" action="" method="post">
     <fieldset>
         <div class="form-group">
@@ -30,6 +32,17 @@
             <button id="ok" class="btn btn-primary" type="submit" style="width: 100%; ">  确定</button>
         </div>
     </fieldset>
+    </form>
+    <script type="text/javascript">
+        function checkPasswords() {
+            var passl = document.getElementById("pwd");
+            var pass2 = document.getElementById("pwd1");
+            if (passl.value != pass2.value)
+                passl.setCustomValidity("两次密码必须输入一致！");
+            else
+                passl.setCustomValidity('');
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SubTitle" runat="server">
     重置密码

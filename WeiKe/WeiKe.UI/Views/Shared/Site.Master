@@ -1,5 +1,12 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
 
+<%
+    WeiKe.Model.Users userInfo = null;
+    if (Page.User.Identity.IsAuthenticated)
+        userInfo = WeiKe.Infrastructure.CommonUtil.DeSerialize<WeiKe.Model.Users>(Page.User.Identity.Name);
+    
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,13 +25,14 @@
         .content
         {
             min-height: 500px;
+             width:1140px 
         }
     </style>
 </head>
 <body>
     <div class="container">
         <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 5px; margin-top: 5px;
-            border-color: ">
+            width:1140px ">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target="#example-navbar-collapse">
@@ -51,9 +59,9 @@
 			<div>
 				<p class="navbar-text navbar-right"
 					style="width: 200px; text-align: right; margin-right: 20px;">
-                     <% if (Page.User.Identity.IsAuthenticated)
+                     <% if (userInfo != null)
                         { %>
-                           <a href="/my.html"><strong><%: Page.User.Identity.Name%></strong> </a>欢迎您！ |
+                           <a href="/my.html"><strong><%: userInfo.name%></strong> </a>欢迎您！ |
                            <a class="btn-mini" href="/Account/LogOff" >退出</a> 
                            <%
                         }
@@ -139,13 +147,13 @@
 
         $(function () {
             var myurl = '<%: myurl %>';
-            if (myurl.indexOf('course') != -1) {
+            if (myurl.indexOf('course.html') != -1) {
                 $("#nv_course").addClass("active");
-            } else if (myurl.indexOf('teachers') != -1) {
+            } else if (myurl.indexOf('teachers.html') != -1) {
                 $("#nv_teachers").addClass("active");
-            } else if (myurl.indexOf('center') != -1) {
+            } else if (myurl.indexOf('center.html') != -1) {
                 $("#nv_center").addClass("active");
-            } else if (myurl.indexOf('about') != -1) {
+            } else if (myurl.indexOf('about.html') != -1) {
                 $("#nv_about").addClass("active");
             }
 

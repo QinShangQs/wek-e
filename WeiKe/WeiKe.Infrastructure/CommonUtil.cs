@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Web.Script.Serialization;
 
 namespace WeiKe.Infrastructure
 {
@@ -69,6 +70,16 @@ namespace WeiKe.Infrastructure
         public static string ParseStr(object obj)
         {
             return obj == null ? string.Empty : obj.ToString();
+        }
+
+        public static string Serialize(object obj) 
+        {
+            return new JavaScriptSerializer().Serialize(obj);
+        }
+
+        public static T DeSerialize<T>(string json) 
+        {
+            return new JavaScriptSerializer().Deserialize<T>(json);
         }
     }
 }

@@ -1,24 +1,52 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true" CodeBehind="My.master.cs" Inherits="WeiKe.UI.Views.Shared.My" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true"
+    CodeBehind="My.master.cs" Inherits="WeiKe.UI.Views.Shared.My" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     <asp:ContentPlaceHolder ID="SubTitle" runat="server" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="NvContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    	<div style="float: left; width: 200px;min-height:500px;font-size:5px">
-			<div class="list-group">
-			<a href="#" class="list-group-item active" style="background-color: #ddd;border-color:#ddd">个人信息 </a> 
-			<a href="/my/info"	class="list-group-item">个人资料</a>
-			<a href="/my/headerimg"class="list-group-item">头像设置</a> 
-			<a href="#" class="list-group-item active"  style="background-color:#ddd;border-color:#ddd">安全 </a> 
-			<a href="/my/reset"	class="list-group-item">重置密码</a>
-			</div>
-		</div>
-		<div style="margin-left:5px;padding-left:10px;float: left; width:734px;min-height:500px;font-size:5px; border:0px solid gray">
-			
-            <asp:ContentPlaceHolder ID="SubNav" runat="server" />
-			<div id="subcontent">
-				<asp:ContentPlaceHolder ID="SubContent" runat="server" />
-			</div>						
-		</div>
+    <div style="float: left; width: 200px; min-height: 500px; font-size: 5px">
+        <div class="list-group">
+            <% if (this.userInfo.roleName == "超级管理员")
+               { 
+            %>
+            <a href="#" class="list-group-item active" style="background-color: #ddd; border-color: #ddd">
+                后台管理 </a>
+                <a href="/myperson/students" class="list-group-item">学生列表</a> 
+                <a href="/myperson/teachers" class="list-group-item">教师列表</a>
+                <a href="/myaction/index" class="list-group-item">活动列表</a>
+                <a href="/myaction/create" class="list-group-item">添加活动</a>
+            <% }
+               else if (this.userInfo.roleName == "教师")
+               {
+            %>
+            <a href="#" class="list-group-item active" style="background-color: #ddd; border-color: #ddd">
+                课程管理 </a>
+                <a href="/mycourse/index" class="list-group-item">课程列表</a> 
+                <a href="/mycourse/create" class="list-group-item">添加课程</a>
+            <%
+               }%>
+           
+            <% if (this.userInfo.roleName != "超级管理员")
+               { 
+            %>
+           <a href="#" class="list-group-item active" style="background-color: #ddd; border-color: #ddd">
+                个人信息 </a>
+           <a href="/my/info" class="list-group-item">个人资料</a> 
+           <a href="/my/headerimg" class="list-group-item">头像设置</a> 
+            <%
+               }%>
+           <a href="#" class="list-group-item active" style="background-color: #ddd; border-color: #ddd">安全 </a>
+           <a href="/my/reset" class="list-group-item">重置密码</a>
+        </div>
+    </div>
+    <div style="margin-left: 5px; padding-left: 10px; float: left; width: 935px; min-height: 500px;
+        font-size: 5px; border: 0px solid gray">
+        <asp:ContentPlaceHolder ID="SubNav" runat="server" />
+        <div id="subcontent">
+            <asp:ContentPlaceHolder ID="SubContent" runat="server" />
+        </div>
+    </div>
 </asp:Content>
