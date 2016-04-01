@@ -53,7 +53,7 @@
 					style="width: 200px; text-align: right; margin-right: 20px;">
                      <% if (Page.User.Identity.IsAuthenticated)
                         { %>
-                           <strong><%: Page.User.Identity.Name%></strong> 欢迎您！ |
+                           <a href="/my.html"><strong><%: Page.User.Identity.Name%></strong> </a>欢迎您！ |
                            <a class="btn-mini" href="/Account/LogOff" >退出</a> 
                            <%
                         }

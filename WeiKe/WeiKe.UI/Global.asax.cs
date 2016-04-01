@@ -64,7 +64,11 @@ namespace WeiKe.UI
                 new { controller = "Teachers", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
-
+            routes.MapRoute(
+                "My", // Route name
+                "my.html", // URL with parameters
+                new { controller = "My", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
 
 
             //routes.MapRoute(
