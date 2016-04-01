@@ -67,16 +67,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CenterController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Response.cs" />
+    <Compile Include="Models\ValidateCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\wk.accdb" />
-    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\bootstrap\js\jquery.min.js" />
+    <Content Include="Content\bootstrap\js\npm.js" />
     <Content Include="Content\images\abg.jpg" />
     <Content Include="Content\images\abg1.jpg" />
     <Content Include="Content\images\emal.jpg" />
@@ -90,13 +104,16 @@
     <Content Include="Content\images\zuoce_01.jpg" />
     <Content Include="Content\images\zuoce_02.jpg" />
     <Content Include="Content\images\zuoce_03.jpg" />
-    <Content Include="Content\zong.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\a5index.js" />
     <Content Include="Scripts\ajaxfileupload.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\common.js" />
     <Content Include="Scripts\js.js" />
+    <Content Include="Views\Account\RegisterTeacher.aspx" />
+    <Content Include="Views\Center\Index.aspx" />
+    <Content Include="Views\Course\Index.aspx" />
+    <Content Include="Views\Teachers\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -141,6 +158,12 @@
       <Project>{2765C93B-1E42-4CA7-9846-327286A4E6A7}</Project>
       <Name>WeiKe.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

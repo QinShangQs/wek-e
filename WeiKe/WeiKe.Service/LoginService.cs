@@ -23,7 +23,7 @@ namespace WeiKe.Service
             return user;
         }
 
-        public static bool Register(Users inst, string message) 
+        public static bool Register(Users inst,ref string message) 
         {
             if (UsersRepository.GetByName(inst.name) != null) 
             {

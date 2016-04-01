@@ -9,6 +9,7 @@ namespace WeiKe.Model
     {
         public int id { get; set; }
         public string name { get; set; }
+        public string phone { get; set; }
         public string email { get; set; }
         public string sex{get;set;}
         public string birthday { get; set; }
@@ -21,6 +22,14 @@ namespace WeiKe.Model
         public int categoryId { get; set; }
         public string pwd { get; set; }
         public string roleName { get; set; }
+        /// <summary>
+        /// 学历
+        /// </summary>
+        public string degree { get; set; }
+        /// <summary>
+        /// 经验
+        /// </summary>
+        public string experience { get; set; }
 
         public Category category { get; set; }
     }

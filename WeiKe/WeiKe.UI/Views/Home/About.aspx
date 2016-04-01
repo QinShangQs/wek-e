@@ -3,8 +3,9 @@
 <asp:Content ID="aboutTitle" ContentPlaceHolderID="TitleContent" runat="server">
     关于我们
 </asp:Content>
+
 <asp:Content ID="aboutContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="page-header">
+    <div class="page-header" style="margin-top:0px">
         <h3>
             我的微课 <small>关于我们</small>
         </h3>

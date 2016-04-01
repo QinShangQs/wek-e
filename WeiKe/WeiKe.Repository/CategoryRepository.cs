@@ -12,7 +12,7 @@ namespace WeiKe.Repository
     {
         public static Category GetById(int id)
         {
-            string sql = string.Format("select * from users where id = {0}", id);
+            string sql = string.Format("select * from category where id = {0}", id);
             Category inst = null;
             using (DataTable dt = OleDbHelper.GetDataSet(sql))
             {
@@ -32,6 +32,21 @@ namespace WeiKe.Repository
             inst.title = CommonUtil.ParseStr(r["title"]);
             inst.parentId = CommonUtil.ParseInt(r["parentId"]);
             return inst;
+        }
+
+        public static IList<Category> FindByParent(int parentId) 
+        {
+            string sql = string.Format("select * from category where parentId = {0}", parentId);
+            IList<Category> list = new List<Category>();
+            using (DataTable dt = OleDbHelper.GetDataSet(sql))
+            {
+                foreach (DataRow r in dt.Rows)
+                {
+                    list.Add(Read(r));
+                }
+            }
+
+            return list;
         }
     }
 }

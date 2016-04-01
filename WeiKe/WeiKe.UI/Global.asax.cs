@@ -38,33 +38,53 @@ namespace WeiKe.UI
                 "validateCode", // Route name
                 "validateCode.html", // URL with parameters
                 new { controller = "Home", action = "ValidateCode" }
-            );      
-
-            routes.MapRoute(
-                "News-action", // Route name
-                "news-{action}.html", // URL with parameters
-                new { controller = "News", action = "Commonweal" } // Parameter defaults
             );
-
-            routes.MapRoute(
-                "News", // Route name
-                "news.html", // URL with parameters
-                new { controller = "News", action = "Index" } // Parameter defaults
-            );
-
-            routes.MapRoute(
-                "NewDetail", // Route name
-                "new-{id}.html", // URL with parameters
-                new { controller = "News", action = "Detail", id = UrlParameter.Optional } // Parameter defaults
-            );
-
-
 
             routes.MapRoute(
                 "About", // Route name
                 "about.html", // URL with parameters
                 new { controller = "Home", action = "About", id = UrlParameter.Optional } // Parameter defaults
             );
+
+            routes.MapRoute(
+                "Center", // Route name
+                "center.html", // URL with parameters
+                new { controller = "Center", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+               "Course", // Route name
+               "course.html", // URL with parameters
+               new { controller = "Course", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Teachers", // Route name
+                "teachers.html", // URL with parameters
+                new { controller = "Teachers", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+
+
+
+            //routes.MapRoute(
+            //    "News-action", // Route name
+            //    "news-{action}.html", // URL with parameters
+            //    new { controller = "News", action = "Commonweal" } // Parameter defaults
+            //);
+
+            //routes.MapRoute(
+            //    "News", // Route name
+            //    "news.html", // URL with parameters
+            //    new { controller = "News", action = "Index" } // Parameter defaults
+            //);
+
+            //routes.MapRoute(
+            //    "NewDetail", // Route name
+            //    "new-{id}.html", // URL with parameters
+            //    new { controller = "News", action = "Detail", id = UrlParameter.Optional } // Parameter defaults
+            //);
+
 
             routes.MapRoute(
                 "Default", // Route name

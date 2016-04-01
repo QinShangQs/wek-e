@@ -12,10 +12,10 @@ namespace WeiKe.Repository
     {
         public static int Add(Users inst)
         {
-            string sql = "insert into users (name,email,sex,birthday,school,grad,parentName,parentPhone,headerImg,addtime,categoryId,pwd,roleName)";
-            sql += string.Format(" values('{0}'，'{1}'，'{2}'，'{3}'，'{4}'，'{5}'，'{6}'，'{7}'，'{8}'，'{9}',{10},'{11}','{12}');select SCOPE_IDENTITY();"
+            string sql = "insert into users (name,email,sex,birthday,school,grad,parentName,parentPhone,headerImg,addtime,categoryId,pwd,roleName,phone,degree, experience)";
+            sql += string.Format(" values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10},'{11}','{12}','{13}','{14}','{15}');"//select SCOPE_IDENTITY();
                 , inst.name, inst.email, inst.sex, inst.birthday, inst.school, inst.grad, inst.parentName, inst.parentPhone, inst.headerImg,
-                CommonUtil.GetDTString(DateTime.Now), inst.categoryId, inst.pwd,inst.roleName);
+               DateTime.Now, inst.categoryId, inst.pwd, inst.roleName, inst.phone,inst.degree, inst.experience);
             return OleDbHelper.ExecuteCommand(sql);
         }
 
@@ -34,8 +34,11 @@ namespace WeiKe.Repository
                        + " ,categoryId = {9}"
                        + " ,pwd = '{10}'"
                        + " ,roleName = '{11}'"
-                       + " where id = {12},", inst.name, inst.email, inst.sex, inst.birthday, inst.school, inst.grad, inst.parentName, inst.parentPhone, inst.headerImg,
-                       inst.categoryId,inst.pwd,inst.roleName, inst.id);
+                       + " ,phone = '{12}'"
+                       + " ,degree = '{13}'"
+                       + " ,experience = '{14}'"
+                       + " where id = {15}", inst.name, inst.email, inst.sex, inst.birthday, inst.school, inst.grad, inst.parentName, inst.parentPhone, inst.headerImg,
+                       inst.categoryId,inst.pwd,inst.roleName,inst.phone,inst.degree,inst.experience, inst.id);
             return OleDbHelper.ExecuteCommand(sql);
         }
 
@@ -96,6 +99,9 @@ namespace WeiKe.Repository
             inst.addtime = CommonUtil.ParseStr(r["addtime"]);
             inst.categoryId = CommonUtil.ParseInt(r["categoryId"]);
             inst.roleName = CommonUtil.ParseStr(r["roleName"]);
+            inst.phone = CommonUtil.ParseStr(r["phone"]);
+            inst.degree = CommonUtil.ParseStr(r["degree"]);
+            inst.experience = CommonUtil.ParseStr(r["experience"]);
             inst.category = CategoryRepository.GetById(CommonUtil.ParseInt(r["categoryId"]));
             return inst;
         }
