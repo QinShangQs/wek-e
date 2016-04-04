@@ -53,9 +53,33 @@ namespace WeiKe.UI
             );
 
             routes.MapRoute(
+                "CenterDetail", // Route name
+                "center-{id}.html", // URL with parameters
+                new { controller = "Center", action = "Detail", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
                "Course", // Route name
                "course.html", // URL with parameters
                new { controller = "Course", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+               "CourseSub", // Route name
+               "course-{id}.html", // URL with parameters
+               new { controller = "Course", action = "Detail", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+               "CourseItem", // Route name
+               "courseitem-{id}.html", // URL with parameters
+               new { controller = "Course", action = "Itemx", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+               "TeacherSub", // Route name
+               "teacher-{id}.html", // URL with parameters
+               new { controller = "Teachers", action = "Detail", id = UrlParameter.Optional } // Parameter defaults
             );
 
             routes.MapRoute(

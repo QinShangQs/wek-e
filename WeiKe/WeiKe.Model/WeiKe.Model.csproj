@@ -42,6 +42,9 @@
   <ItemGroup>
     <Compile Include="Actions.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="Comments.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="CourseItem.cs" />
     <Compile Include="Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

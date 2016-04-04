@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="NvContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <div style="float: left; width: 200px; min-height: 500px; font-size: 5px">
+    <div style="float: left; width: 200px; min-height: 500px; font-size:smaller">
         <div class="list-group">
             <% if (this.userInfo.roleName == "超级管理员")
                { 
@@ -43,7 +43,7 @@
         </div>
     </div>
     <div style="margin-left: 5px; padding-left: 10px; float: left; width: 935px; min-height: 500px;
-        font-size: 5px; border: 0px solid gray">
+        font-size: smaller; border: 0px solid gray">
         <asp:ContentPlaceHolder ID="SubNav" runat="server" />
         <div id="subcontent">
             <asp:ContentPlaceHolder ID="SubContent" runat="server" />

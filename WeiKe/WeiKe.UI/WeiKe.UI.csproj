@@ -93,7 +93,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\wk.accdb" />
+    <Content Include="App_Data\wk.mdb" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\css\bootstrap.css" />
@@ -103,8 +103,15 @@
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap\js\jquery.min.js" />
     <Content Include="Content\bootstrap\js\npm.js" />
+    <Content Include="Content\images\course.jpg" />
+    <Content Include="Content\images\nopic.jpg" />
+    <Content Include="Content\images\s1.jpg" />
+    <Content Include="Content\images\s2.jpg" />
+    <Content Include="Content\images\s3.jpg" />
+    <Content Include="Content\images\shouye.jpg" />
     <Content Include="Content\images\abg.jpg" />
     <Content Include="Content\images\abg1.jpg" />
+    <Content Include="Content\images\about.jpg" />
     <Content Include="Content\images\emal.jpg" />
     <Content Include="Content\images\logo.ico" />
     <Content Include="Content\images\noheader.jpg" />
@@ -114,22 +121,36 @@
     <Content Include="Content\images\sucai1_13.jpg" />
     <Content Include="Content\images\sucai1_15.jpg" />
     <Content Include="Content\images\sucai1_36.jpg" />
+    <Content Include="Content\images\teacher.jpg" />
     <Content Include="Content\images\zuoce_01.jpg" />
     <Content Include="Content\images\zuoce_02.jpg" />
     <Content Include="Content\images\zuoce_03.jpg" />
+    <Content Include="Content\uploadify-v3.1\jquery.uploadify-3.1.js" />
+    <Content Include="Content\uploadify-v3.1\jquery.uploadify-3.1.min.js" />
+    <Content Include="Content\uploadify-v3.1\uploadify-cancel.png" />
+    <Content Include="Content\uploadify-v3.1\uploadify.css" />
+    <Content Include="Content\uploadify-v3.1\uploadify.swf" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\a5index.js" />
     <Content Include="Scripts\ajaxfileupload.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\common.js" />
     <Content Include="Scripts\js.js" />
+    <Content Include="Scripts\uploadify-v3.1\jquery.uploadify-3.1.js" />
+    <Content Include="Scripts\uploadify-v3.1\jquery.uploadify-3.1.min.js" />
+    <Content Include="Scripts\uploadify-v3.1\uploadify-cancel.png" />
+    <Content Include="Scripts\uploadify-v3.1\uploadify.css" />
+    <Content Include="Scripts\uploadify-v3.1\uploadify.swf" />
     <Content Include="Views\Account\RegisterTeacher.aspx" />
+    <Content Include="Views\Center\Detail.aspx" />
     <Content Include="Views\Center\Index.aspx" />
+    <Content Include="Views\Course\Detail.aspx" />
     <Content Include="Views\Course\Index.aspx" />
+    <Content Include="Views\Course\Itemx.aspx" />
     <Content Include="Views\MyAction\Create.aspx" />
-    <Content Include="Views\MyAction\Edit.aspx" />
     <Content Include="Views\MyAction\Index.aspx" />
     <Content Include="Views\MyCourse\Create.aspx" />
+    <Content Include="Views\MyCourse\DetailItem.aspx" />
     <Content Include="Views\MyCourse\Edit.aspx" />
     <Content Include="Views\MyCourse\Index.aspx" />
     <Content Include="Views\MyPerson\Students.aspx" />
@@ -140,6 +161,7 @@
     <Content Include="Views\My\HeaderImg.aspx" />
     <Content Include="Views\My\InfoTeacher.aspx" />
     <Content Include="Views\Shared\RespUserControl.ascx" />
+    <Content Include="Views\Teachers\Detail.aspx" />
     <Content Include="Views\Teachers\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

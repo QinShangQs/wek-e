@@ -92,8 +92,8 @@
                 请选择科目！</div>
         </div>
         <div class="form-group">
-            <input type="hidden" id="categoryId" name="categoryId" value="0" />
-            <input type="hidden" id="grad" name="grad" value="" />
+            <input type="hidden" id="categoryId" name="categoryId" value="<%:Model.categoryId %>" />
+            <input type="hidden" id="grad" name="grad" value="<%:Model.grad %>" />
             <button id="ok" class="btn btn-primary" type="submit" style="width: 100%;">
                 保存</button>
         </div>

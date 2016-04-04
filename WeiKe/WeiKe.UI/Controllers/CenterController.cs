@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WeiKe.Service;
 
 namespace WeiKe.UI.Controllers
 {
@@ -13,8 +14,12 @@ namespace WeiKe.UI.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(ActionsService.RetrievesAll());
         }
 
+        public ActionResult Detail(int id) 
+        {
+            return View(ActionsService.GetById(id));
+        }
     }
 }

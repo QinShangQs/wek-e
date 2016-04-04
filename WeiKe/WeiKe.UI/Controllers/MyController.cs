@@ -73,10 +73,25 @@ namespace WeiKe.UI.Controllers
 
         public ActionResult HeaderImg()
         {
+            return View(base.CurrentUser);
+        }
 
-            ViewData["grads"] = CategroyService.FindByParent(0);
-            ViewData["cates"] = CategroyService.FindByParent(1);
-            return View();
+        [HttpPost]
+        public ActionResult HeaderImg(string pathName) 
+        {
+            Users user = base.CurrentUser;
+            user.headerImg = pathName;
+            bool success = UsersService.Edit(user);
+            if (success)
+            {
+                FormsAuthent(user);
+                ViewData["resp"] =  (base.RespResult(true, "头像更新成功!"));
+            }
+            else
+            {
+                ViewData["resp"] = (base.RespResult(true, "操作失败请稍后重试！"));
+            }
+            return View(user);
         }
 
         public ActionResult Reset() 

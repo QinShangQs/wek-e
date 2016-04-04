@@ -22,5 +22,10 @@ namespace WeiKe.Service
         {
             return UsersRepository.Update(inst) > 0;
         }
+
+        public static Users GetById(int id) 
+        {
+            return UsersRepository.GetById(id);
+        }
     }
 }
