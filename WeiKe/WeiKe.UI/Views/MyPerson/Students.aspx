@@ -28,12 +28,15 @@
                 <th style="width: 150px">
                     注册时间
                 </th>
+                <th>
+                    操作
+                </th>
             </tr>
         </thead>
         <tbody>
             <% foreach (WeiKe.Model.Users m in Model)
                { %>
-            <tr>
+            <tr id="d<%:m.id %>">
                 <td>
                     <% if (!string.IsNullOrEmpty(m.headerImg))
                        { 
@@ -69,6 +72,10 @@
                 <td>
                     <%= m.addtime %>
                 </td>
+                <td>
+                    <a href="javascript:removeX(<%:m.id %>,this)" style="float: right" class="btn btn-danger btn-xs">
+                删除</a>
+                </td>
             </tr>
             <%} %>
         </tbody>
@@ -83,6 +90,19 @@
                    pager.PageSize, pager.RecordCount,
                                     pager.SearchParameter) 
     %>
+
+    <script type="text/javascript">
+        function removeX(id) {
+            if (window.confirm("删除后不可恢复，确定删除吗？")) {
+                Utils.ajax("/MyPerson/Remove", { id: id }, function () {
+                    alert('删除成功！');
+                    $("#d" + id).remove();
+                }, function (obj) {
+                    alert(obj.Message);
+                });
+            }
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SubTitle" runat="server">
     学生列表

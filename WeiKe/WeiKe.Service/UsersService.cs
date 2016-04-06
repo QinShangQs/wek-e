@@ -27,5 +27,15 @@ namespace WeiKe.Service
         {
             return UsersRepository.GetById(id);
         }
+
+        public static bool Remove(int id) 
+        {
+            IList<Course> cs = CourseRepository.FindByTeacherId(id);
+            foreach (Course c in cs)
+            {
+                CourseRepository.Delete(c.id);
+            }
+            return UsersRepository.Delete(id) > 0;
+        }
     }
 }

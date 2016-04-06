@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div style="width: 800px; margin: auto; padding-top: 20px" id="myv">
-        <video id="vo" src="<%:Model.filePath %>" width="100%" controls="controls" autoplay="autoplay">
+        <video id="vo" src="<%:Model.filePath %>" style="width:100%" controls="controls" autoplay="autoplay">
         您的浏览器不支持 video 标签。        
         </video>
         <br />

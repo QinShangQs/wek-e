@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/My.master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="SubContent" runat="server">
+
 <div style="height:3px"></div>
 <%: Html.Partial("RespUserControl") %>
     <form id="f1" role="form" style="width: 300px; margin: auto" action="" method="post">
@@ -9,7 +10,7 @@
             <label class="control-label">
                 原始密码</label>
             <div class="controls">
-                <input name="oldPwd" type="password" placeholder="必填项" class="form-control" required>
+                <input name="oldPwd" type="password" placeholder="必填项" class="form-control" required="true">
             </div>
         </div>
         <div class="form-group">
@@ -17,15 +18,15 @@
                 新密码</label>
             <div class="controls">
                 <input id="pwd" name="pwd" type="password" placeholder="必填项" class="form-control"
-                    required onchange="checkPasswords()">
+                    required >
             </div>
         </div>
         <div class="form-group">
             <label class="control-label">
                 确认密码</label>
             <div class="controls">
-                <input id="pwd1" name="pwd1" type="password" placeholder="必填项" class="form-control"
-                    required onchange="checkPasswords()">
+                <input id="confirm_password"  name="confirm_password" type="password" placeholder="必填项" equalTo:"#pwd" class="form-control"
+                    required >
             </div>
         </div>
         <div class="form-group">
@@ -43,6 +44,17 @@
                 passl.setCustomValidity('');
         }
     </script>
+    
+    <script type="text/javascript">
+        $.validator.setDefaults({
+            submitHandler: function () {
+                $("#f1").submit();
+            }
+        });
+        $().ready(function () {
+            $("#f1").validate();
+        });
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SubTitle" runat="server">
     重置密码

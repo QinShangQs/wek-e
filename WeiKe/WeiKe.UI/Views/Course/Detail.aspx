@@ -55,7 +55,9 @@
                 </dl>
             </div>
         </div>
-        <div>
+       
+    </div>
+     <div style="margin: auto; width: 800px" >
             <a href="#" class="list-group-item active">视频列表 </a>
             <% foreach (var item in Model.items)
                {
@@ -68,6 +70,4 @@
             <%
            } %>
         </div>
-    </div>
-
 </asp:Content>

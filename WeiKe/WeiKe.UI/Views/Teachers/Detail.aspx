@@ -69,6 +69,11 @@
         </table>
     </div>
     <div style="margin: auto; width: 800px; padding-top: 10px">
+        <% if (((IList<WeiKe.Model.Course>)ViewData["Courses"]).Count == 0) {
+        %>
+            <center>老师还没来得及上传课程～</center>
+        <%   
+        }else{ %>
         <% foreach (var item in (IList<WeiKe.Model.Course>)ViewData["Courses"])
            { 
         %>
@@ -119,6 +124,8 @@
             </table>
         </div>
         <%   
+           } %>
+           <%   
            } %>
     </div>
 </asp:Content>

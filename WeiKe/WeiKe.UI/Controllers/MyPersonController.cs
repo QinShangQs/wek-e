@@ -35,5 +35,17 @@ namespace WeiKe.UI.Controllers
             return View(list.Skip((page - 1) * pager.PageSize).Take(pager.PageSize).ToList());
         }
 
+        public ActionResult Remove(int id)
+        {
+            bool success = UsersService.Remove(id);
+            if (success)
+            {
+                return Json(base.RespResult(true, "删除成功！"));
+            }
+            else
+            {
+                return Json(base.RespResult(false, "删除失败，请稍后重试！"));
+            }
+        }
     }
 }
