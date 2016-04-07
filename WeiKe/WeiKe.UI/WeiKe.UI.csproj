@@ -125,6 +125,7 @@
     <Content Include="Content\images\zuoce_01.jpg" />
     <Content Include="Content\images\zuoce_02.jpg" />
     <Content Include="Content\images\zuoce_03.jpg" />
+    <Content Include="Content\jquery-1.12.3.min.js" />
     <Content Include="Content\jquery.validate.min.js" />
     <Content Include="Content\messages_zh.min.js" />
     <Content Include="Content\uploadify-v3.1\jquery.uploadify-3.1.js" />
@@ -143,6 +144,9 @@
     <Content Include="Scripts\uploadify-v3.1\uploadify-cancel.png" />
     <Content Include="Scripts\uploadify-v3.1\uploadify.css" />
     <Content Include="Scripts\uploadify-v3.1\uploadify.swf" />
+    <Content Include="Scripts\video\jwplayer.js" />
+    <Content Include="Scripts\video\jwplayernew.css" />
+    <Content Include="Scripts\video\player.swf" />
     <Content Include="Views\Account\RegisterTeacher.aspx" />
     <Content Include="Views\Center\Detail.aspx" />
     <Content Include="Views\Center\Index.aspx" />
@@ -213,6 +217,7 @@
     <None Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\My.master" />
+    <Content Include="Scripts\video\glow.zip" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

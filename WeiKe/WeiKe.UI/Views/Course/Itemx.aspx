@@ -2,11 +2,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div style="width: 800px; margin: auto; padding-top: 20px" id="myv">
-        <video id="vo" src="<%:Model.filePath %>" style="width:100%" controls="controls" autoplay="autoplay">
-        您的浏览器不支持 video 标签。        
-        </video>
-        <br />
-        <br />
+        <div id="jwplayer" style="background: transparent !important; margin:0 auto; width:100%; overflow:hidden;">
+	        <div id="player"></div>
+        </div>
+
         <div class="page-header">
             <h3>
                 <%:Model.title %>
@@ -46,6 +45,7 @@
             var content = $.trim($("#content").val());
             if (Utils.isEmpty(content)) {
                 $("#alertx").show();
+                return;
             }
 
             var courseItemId = '<%:Model.id %>';
@@ -66,6 +66,18 @@
 
         });
     </script>
+    <script type="text/javascript" src="/Scripts/video/jwplayer.js"></script>
+    <script type="text/javascript">
+        jwplayer("player").setup({
+            skin: "/Scripts/video/glow.zip",
+            stretching: "fill",
+            flashplayer: "/Scripts/video/player.swf",
+            image: "",
+            width: 800,
+            height: 350,
+            levels: [{ file: "<%:Model.filePath %>"}]
+        });
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="TitleContent" runat="server">
     <%:Model.title %>
