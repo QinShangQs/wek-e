@@ -2,8 +2,8 @@
 
 <%@ Import Namespace="System.IO" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="SubContent" runat="server">
-    <link href="/Scripts/uploadify-v3.1/uploadify.css" rel="stylesheet" type="text/css" />
-    <script src="/Scripts/uploadify-v3.1/jquery.uploadify-3.1.min.js" type="text/javascript"></script>
+    <script src="/Scripts/uploadify-v3.1/jquery.uploadify3.1.fixed.js" type="text/javascript"></script>
+    <link href="/Scripts/uploadify-v3.1/uploadify.css" rel="stylesheet" type="text/css"/>
        <div style="height: 3px">
     </div>
     <%: Html.Partial("RespUserControl") %>

@@ -80,26 +80,20 @@
             $("#grad").val($(this).attr('gradTitle'));
         });
 
-        //        $("#cats").find("button").click(function () {
-        //            $("#cats").find("button").removeClass('active');
-        //            $(this).addClass('active');
-        //            $("#categoryId").val($(this).attr('catId'));
-        //        });
-
         $("#f1").submit(function () {
+            return checkval();
+        });
+
+        function checkval() {
             $("#alert_grad").hide();
             if ($("#controls").find(".active").length == 0) {
                 $("#alert_grad").show();
                 return false;
             }
-
-//            $("#alert_cat").hide();
-//            if ($("#cats").find(".active").length == 0) {
-//                $("#alert_cat").show();
-//                return false;
-//            }
-        });
+            return true;
+        }
     </script>
+    <%: Html.Partial("ValidateUserControl")%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SubTitle" runat="server">
     个人资料

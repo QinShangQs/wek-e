@@ -94,6 +94,23 @@ namespace WeiKe.UI
                 new { controller = "My", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
+            routes.MapRoute(
+                "Error", // Route name
+                "error.html", // URL with parameters
+                new { controller = "Error", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Error404", // Route name
+                "404.html", // URL with parameters
+                new { controller = "Error", action = "A404", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Error403", // Route name
+                "403.html", // URL with parameters
+                new { controller = "Error", action = "A403", id = UrlParameter.Optional } // Parameter defaults
+            );
 
             //routes.MapRoute(
             //    "News-action", // Route name

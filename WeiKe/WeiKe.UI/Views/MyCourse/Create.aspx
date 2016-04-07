@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/My.master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="SubContent" runat="server">
-    <link href="/Scripts/uploadify-v3.1/uploadify.css" rel="stylesheet" type="text/css" />
-    <script src="/Scripts/uploadify-v3.1/jquery.uploadify-3.1.min.js" type="text/javascript"></script>
+    <script src="/Scripts/uploadify-v3.1/jquery.uploadify3.1.fixed.js" type="text/javascript"></script>
+    <link href="/Scripts/uploadify-v3.1/uploadify.css" rel="stylesheet" type="text/css"/>
     <div style="height: 3px">
     </div>
     <%: Html.Partial("RespUserControl") %>
-    <form id="form1" role="form" style="width: 300px; margin: auto" action="" method="post">
+    <form id="f1" role="form" style="width: 300px; margin: auto" action="" method="post">
     <fieldset>
         <div class="form-group">
             <label class="control-label">
@@ -55,12 +55,17 @@
     </fieldset>
     </form>
     <script type="text/javascript">
-        $("#form1").submit(function () {
+        $("#f1").submit(function () {
+            return checkval();
+        });
+
+        function checkval() {
             if (Utils.isEmpty($("#pathName").val())) {
                 $("#alert_wx").addClass("alert-danger").text("请上传图片！").show();
                 return false;
             }
-        });
+            return true;
+        }
 
         $(function () {
             $('#file_upload').uploadify({
@@ -77,6 +82,7 @@
             });
         });
     </script>
+    <%: Html.Partial("ValidateUserControl")%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SubTitle" runat="server">
     添加课程

@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/My.master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="SubContent" runat="server">
-    <link href="/Scripts/uploadify-v3.1/uploadify.css" rel="stylesheet" type="text/css" />
-    <script src="/Scripts/uploadify-v3.1/jquery.uploadify-3.1.min.js" type="text/javascript"></script>
+
     <div>
         <div class="page-header" style="margin-top: 0px">
             <h4>
@@ -16,7 +15,7 @@
                     <div style="height: 3px">
                     </div>
                     <%: Html.Partial("RespUserControl") %>
-                    <form id="form1" role="form" style="width: 300px;" action="" method="post">
+                    <form id="f1" role="form" style="width: 300px;" action="" method="post">
                     <fieldset>
                         <div class="form-group">
                             <label class="control-label">
@@ -36,7 +35,7 @@
                             <label class="control-label">
                                 上传.avi、.mp4视频格式，推荐视频大小小于1G</label>
                             <div class="controls">
-                                <input type="file" id="file_upload" name="file_upload" />
+                                <%: Html.Partial("UploadifyUserControl")%>
                             </div>
                             <div id="alert_wx" class="alert" style="display: none">
                             </div>
@@ -69,12 +68,17 @@
         </table>
     </div>
     <script type="text/javascript">
-        $("#form1").submit(function () {
+        $("#f1").submit(function () {
+            return checkval();
+        });
+
+        function checkval() {
             if (Utils.isEmpty($("#filePath").val())) {
                 $("#alert_wx").addClass("alert-danger").text("请上传视频！").show();
                 return false;
             }
-        });
+            return true;
+        }
 
         function removeX(id, label) {
             if (window.confirm("删除后不可恢复，确定删除吗？")) {
@@ -87,21 +91,9 @@
             }
         }
 
-        $(function () {
-            $('#file_upload').uploadify({
-                'buttonText': '请选择视频文件',
-                'swf': '/Scripts/uploadify-v3.1/uploadify.swf',
-                'uploader': '/Base/Upload',
-                'sizeLimit': '99999999999',
-                'fileTypeDesc': '视频文件',
-                'fileTypeExts': '*.avi; *.mp4;',
-                'onUploadSuccess': function (file, data, response) {
-                    eval("data=" + data);
-                    $("#filePath").val(data.PathName);
-                }
-            });
-        });
+ 
     </script>
+    <%: Html.Partial("ValidateUserControl")%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SubTitle" runat="server">
     <%:Model.title %>

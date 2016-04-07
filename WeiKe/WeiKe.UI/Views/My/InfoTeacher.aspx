@@ -54,7 +54,7 @@
             <label class="control-label">
                 学校</label>
             <div class="controls">
-                <input name="school" type="text" placeholder="" value="<%: Model.school %>" class="form-control">
+                <input name="school" type="text" placeholder="" value="<%: Model.school %>" class="form-control" required>
             </div>
         </div>
         <div class="form-group">
@@ -114,6 +114,10 @@
         });
 
         $("#f1").submit(function () {
+            return checkval();
+        });
+
+        function checkval() {
             $("#alert_grad").hide();
             if ($("#controls").find(".active").length == 0) {
                 $("#alert_grad").show();
@@ -125,8 +129,10 @@
                 $("#alert_cat").show();
                 return false;
             }
-        });
+            return true;
+        }
     </script>
+    <%: Html.Partial("ValidateUserControl")%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SubTitle" runat="server">
     个人资料
