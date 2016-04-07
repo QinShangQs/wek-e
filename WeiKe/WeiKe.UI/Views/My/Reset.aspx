@@ -25,7 +25,7 @@
             <label class="control-label">
                 确认密码</label>
             <div class="controls">
-                <input id="confirm_password"  name="confirm_password" type="password" placeholder="必填项" equalTo:"#pwd" class="form-control"
+                <input id="confirm_password"  name="confirm_password" type="password" placeholder="必填项" equalTo="#pwd" class="form-control"
                     required >
             </div>
         </div>
@@ -34,27 +34,8 @@
         </div>
     </fieldset>
     </form>
-    <script type="text/javascript">
-        function checkPasswords() {
-            var passl = document.getElementById("pwd");
-            var pass2 = document.getElementById("pwd1");
-            if (passl.value != pass2.value)
-                passl.setCustomValidity("两次密码必须输入一致！");
-            else
-                passl.setCustomValidity('');
-        }
-    </script>
     
-    <script type="text/javascript">
-        $.validator.setDefaults({
-            submitHandler: function () {
-                $("#f1").submit();
-            }
-        });
-        $().ready(function () {
-            $("#f1").validate();
-        });
-</script>
+    <%: Html.Partial("ValidateUserControl")%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SubTitle" runat="server">
     重置密码

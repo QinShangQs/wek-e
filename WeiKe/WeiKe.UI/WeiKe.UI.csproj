@@ -125,6 +125,8 @@
     <Content Include="Content\images\zuoce_01.jpg" />
     <Content Include="Content\images\zuoce_02.jpg" />
     <Content Include="Content\images\zuoce_03.jpg" />
+    <Content Include="Content\jquery.validate.min.js" />
+    <Content Include="Content\messages_zh.min.js" />
     <Content Include="Content\uploadify-v3.1\jquery.uploadify-3.1.js" />
     <Content Include="Content\uploadify-v3.1\jquery.uploadify-3.1.min.js" />
     <Content Include="Content\uploadify-v3.1\uploadify-cancel.png" />
