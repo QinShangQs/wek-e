@@ -4,7 +4,6 @@
     注册
 </asp:Content>
 <asp:Content ID="registerContent" ContentPlaceHolderID="MainContent" runat="server">
-    <script src="/Scripts/jquery.validate.min.js" type="text/javascript"></script>
     <ul id="myTab" class="nav nav-tabs">
         <li ><a href="/register.html" >学生</a></li>
         <li class="active"><a href="#" >教师</a></li>
@@ -50,7 +49,7 @@
                         密码</label>
                     <div class="controls">
                         <input id="pwd" name="pwd" type="password" placeholder="必填项" class="form-control"
-                            required onchange="checkPasswords()">
+                            required rangelength='[6,10]' >
                     </div>
                 </div>
                 <div class="form-group">
@@ -58,7 +57,7 @@
                         确认密码</label>
                     <div class="controls">
                         <input id="pwd1" name="pwd1" type="password" placeholder="必填项" class="form-control"
-                            required onchange="checkPasswords()">
+                            required  equalTo="#pwd">
                     </div>
                 </div>
                 <div class="form-group">
@@ -66,7 +65,8 @@
                         移动电话</label>
                     <div class="controls">
                         <input name="phone" type="text" placeholder="必填项" class="form-control"
-                        pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" required="required"  />
+                        digits='true' minlength=11 maxlength=11 
+                        required="required"  />
                     </div>
                 </div>
                 <div class="form-group">
@@ -146,15 +146,7 @@
 
     </div>
 	<script type="text/javascript">
-	    function checkPasswords() {
-	        var passl = document.getElementById("pwd");
-	        var pass2 = document.getElementById("pwd1");
-	        if (passl.value != pass2.value)
-	            passl.setCustomValidity("两次密码必须输入一致！");
-	        else
-	            passl.setCustomValidity('');
-	    }
-
+	   
 
 	    $("#controls").find("button").click(function () {
 	        $("#controls").find("button").removeClass('active');
@@ -168,19 +160,26 @@
 	        $("#categoryId").val($(this).attr('catId'));
 	    });
 
-	    $("#f1").submit(function () {
+	    function checkval() {
 	        $("#alert_grad").hide();
 	        if ($("#controls").find(".active").length == 0) {
 	            $("#alert_grad").show();
 	            return false;
-	        }
+	        }	        
 
 	        $("#alert_cat").hide();
 	        if ($("#cats").find(".active").length == 0) {
 	            $("#alert_cat").show();
 	            return false;
 	        }
-	    });
+
+	        return true;
+        }
+
+
+        $("#f1").submit(function () {
+            return checkval();
+        });
 
 	    $("#imgCode").click(function () {
 	        $(this).attr('src', "/ValidateCode.html?r="+Math.random());
@@ -188,4 +187,5 @@
 
 	    $("#imgCode").click();
 	</script>
+    <%: Html.Partial("ValidateUserControl")%>
 </asp:Content>
