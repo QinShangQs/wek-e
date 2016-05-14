@@ -121,5 +121,10 @@ namespace WeiKe.UI.Controllers
             }
             return View();
         }
+
+        public ActionResult ViewHistory() 
+        {
+            return View();
+        }
     }
 }

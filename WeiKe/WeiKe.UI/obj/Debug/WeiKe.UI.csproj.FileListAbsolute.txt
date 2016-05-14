@@ -1,16 +1,3 @@
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.UI.dll
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.UI.pdb
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Infrastructure.dll
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Model.dll
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Service.dll
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Infrastructure.pdb
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Model.pdb
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Service.pdb
-E:\WWW\wek-e\WeiKe\WeiKe.UI\obj\Debug\WeiKe.UI.csprojResolveAssemblyReference.cache
-E:\WWW\wek-e\WeiKe\WeiKe.UI\obj\Debug\WeiKe.UI.dll
-E:\WWW\wek-e\WeiKe\WeiKe.UI\obj\Debug\WeiKe.UI.pdb
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Repository.dll
-E:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Repository.pdb
 D:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.UI.dll
 D:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.UI.pdb
 D:\WWW\wek-e\WeiKe\WeiKe.UI\bin\WeiKe.Infrastructure.dll

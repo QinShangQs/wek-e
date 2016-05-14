@@ -6,12 +6,12 @@
 	        <div id="player"></div>
         </div>
 
-        <div class="page-header">
-            <h3>
+        <div  class="page-header">
+            <h3 id="myTitle">
                 <%:Model.title %>
             </h3>
         </div>
-        <p>
+        <p id="myRemark">
             <%:Model.remark %></p>
         <% foreach (var item in (IList<WeiKe.Model.Comments>)ViewData["cmts"])
            { 

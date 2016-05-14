@@ -127,6 +127,7 @@
     <Content Include="Content\images\zuoce_02.jpg" />
     <Content Include="Content\images\zuoce_03.jpg" />
     <Content Include="Content\jquery-1.12.3.min.js" />
+    <Content Include="Content\jquery.cookie.js" />
     <Content Include="Content\jquery.validate.min.js" />
     <Content Include="Content\messages_zh.min.js" />
     <Content Include="Content\uploadify-v3.1\jquery.uploadify-3.1.js" />
@@ -169,6 +170,7 @@
     <Content Include="Views\My\Info.aspx" />
     <Content Include="Views\My\HeaderImg.aspx" />
     <Content Include="Views\My\InfoTeacher.aspx" />
+    <Content Include="Views\My\ViewHistory.aspx" />
     <Content Include="Views\Shared\RespUserControl.ascx" />
     <Content Include="Views\Shared\UploadifyUserControl.ascx" />
     <Content Include="Views\Teachers\Detail.aspx" />

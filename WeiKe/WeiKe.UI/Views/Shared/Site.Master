@@ -22,6 +22,7 @@
       <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="/Content/jquery-1.12.3.min.js"></script>
+    <script src="/Content/jquery.cookie.js"></script>
     <script src="/Content/bootstrap/js/bootstrap.min.js"></script>
     <script src="/Scripts/common.js" type="text/javascript"></script>
     <style type="text/css">
@@ -34,8 +35,16 @@
             min-height: 500px;
              width:1140px 
         }
-
     </style>
+    <script type="text/javascript">
+        var _userInfo = {id:0,name:'', isLogin:false,roleName:''};
+         <% if (userInfo != null) { %>
+         _userInfo.id = '<%: userInfo.id%>';
+         _userInfo.name = '<%: userInfo.name%>';
+         _userInfo.isLogin = true; 
+         _userInfo.roleName = '<%: userInfo.roleName%>';
+         <% } %>
+    </script>
 </head>
 <body>
     <div class="container">
@@ -192,6 +201,36 @@
             }, function (obj) {
                 $("#login_form_err").text(obj.Message).show('hidden');
             });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var matcher = null;
+            var url = location.href;
+            if (url.match(/center-\d+/i)) {
+                matcher = "活动";
+            } else if (url.match(/courseitem-\d+/i)) {
+                matcher = "视频";
+            }
+            if (matcher && _userInfo.isLogin && _userInfo.roleName == '学生') {
+                var data = { url: url, title: $.trim($("#myTitle").text()), remark: $.trim($("#myRemark").text()), matcher: matcher };
+                if (data.title.length == 0) return;
+                var key = _userInfo.id;
+                var views = $.cookie(key);
+                views = views == null ? [] : $.parseJSON(views);
+                views = views == null ? [] : views;
+                for (var i = 0; i < views.length; i++) {
+                    var view = views[i];
+                    if (view.url == data.url) {
+                        views.splice(i, 1);
+                        break;
+                    }
+                }
+                //将数据添加到第一个
+                views.splice(0, 0, data);
+                $.cookie(key, JSON.stringify(views), { expires: 7 });
+            }
         });
     </script>
 </body>

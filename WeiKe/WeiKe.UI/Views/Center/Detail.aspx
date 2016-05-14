@@ -6,9 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div style="margin: auto; width: 800px">
         <div class="page-header">
-            <h3><%:Model.name %></h3>
+            <h3 id="myTitle"><%:Model.name %></h3>
         </div>
-        <p>
+        <p id="myRemark">
             <%:Model.content %></p>
         <div class="page-footer">
         <hr />
